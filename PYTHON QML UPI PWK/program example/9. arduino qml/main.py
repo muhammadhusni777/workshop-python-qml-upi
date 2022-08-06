@@ -179,7 +179,7 @@ def serial_write(num):
         
         )
         if (transmit_time > 0.5):
-            #print(data_send)
+            print(data_send)
             ser.write(data_send.encode())
             transmit_time_prev = time.time() 
     

@@ -15,7 +15,7 @@ Window {
 	//maximumHeight : 800
 	//minimumHeight : height
 	title:"membuat windows"
-	color : "pink"
+	color : "#FF96C5"
     visible: true
     //flags: Qt.WindowMaximized //Qt.Dialog
 	
