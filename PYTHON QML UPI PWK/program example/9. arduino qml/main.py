@@ -145,7 +145,7 @@ def serial_read(num):
             ser_bytes = ser.readline()
             serial_data = (ser_bytes.decode('utf-8')[:-2])
             
-            #print(serial_data)
+            print(serial_data)
                 
         except:
             serial_data = serial_data
@@ -179,7 +179,7 @@ def serial_write(num):
         
         )
         if (transmit_time > 0.5):
-            print(data_send)
+            #print(data_send)
             ser.write(data_send.encode())
             transmit_time_prev = time.time() 
     
