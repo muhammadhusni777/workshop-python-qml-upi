@@ -85,6 +85,7 @@ class table(QObject):
         self.engine = QQmlApplicationEngine(self)
         self.engine.rootContext().setContextProperty("backend", self)    
         self.engine.load(QUrl("main.qml"))
+        sys.exit(self.app.exec_())
     
     
     
@@ -163,6 +164,8 @@ def serial_read(num):
             input2_color = "#df1c39"
         else:
             input2_color = "#04f8fa"
+            
+        
 #----------------------------------------------------------------#
 
 def serial_write(num):

@@ -27,6 +27,7 @@ class table(QObject):
         self.engine = QQmlApplicationEngine(self)
         self.engine.rootContext().setContextProperty("backend", self)    
         self.engine.load(QUrl("main.qml"))
+        sys.exit(self.app.exec_())
     
     
     

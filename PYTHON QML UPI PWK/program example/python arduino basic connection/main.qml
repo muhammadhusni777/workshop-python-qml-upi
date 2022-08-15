@@ -96,6 +96,19 @@ Window {
 	}
 	
 	
+	Image {
+	id : zuma
+	x :0
+	y : 200
+	width : 100
+	height : 100
+	source : "zuma.png"
+	visible  : false
+	
+	}
+	
+	
+	
 	Timer{
 		id:tmgauge
 		interval: 50
@@ -103,7 +116,7 @@ Window {
 		running: true
 		onTriggered: {
 		gauge1.value = backend.get_analog()
-		
+		zuma.rotation = backend.get_analog()
 		}
 	}
 	
