@@ -71,6 +71,7 @@ class table(QObject):
         self.engine = QQmlApplicationEngine(self)
         self.engine.rootContext().setContextProperty("backend", self)    
         self.engine.load(QUrl("main.qml"))
+        sys.exit(self.app.exec_())
         
         
     @pyqtSlot(str)
@@ -108,7 +109,7 @@ def serial_read(num):
             serial_data = serial_data
             
         
-        
+        print(serial_data)
         analog = int(serial_data)
         
 #----------------------------------------------------------------#
@@ -132,13 +133,15 @@ def serial_write(num):
 ########## memanggil class table di mainloop######################
 #----------------------------------------------------------------#    
 if __name__ == "__main__":
-    main = table()
-    
     t1 = threading.Thread(target=serial_read, args=(10,))
     t1.start()
     
     t2 = threading.Thread(target=serial_write, args=(10,))
     t2.start()
+    
+    main = table()
+    
+    
     
     
 #----------------------------------------------------------------#
