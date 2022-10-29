@@ -1,0 +1,14 @@
+pip3 install --user pyqt5  
+sudo apt-get install python3-pyqt5  
+sudo apt-get install pyqt5-dev-tools
+sudo apt-get install qttools5-dev-tools
+python3-pyqt5.qtquick
+pip install python-qt5
+sudo apt-get install git golang pkg-config golang-go.tools
+sudo apt-get install qtbase5-private-dev
+sudo apt-get install qtdeclarative5-private-dev
+sudo apt-get install libqt5opengl5-dev
+sudo apt-get install gccgo gccgo-go
+sudo apt-get install g++ g++-multilib
+sudo apt -y install qml-module-qtquick-controls
+sudo apt -y install qml-module-qtquick-extras
